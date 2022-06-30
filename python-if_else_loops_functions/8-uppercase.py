@@ -2,4 +2,4 @@
 def uppercase(str):
     for i in str:
         if ord(i) <= 123 and ord(i) >= 97:
-            print(str.upper)
+             print("{}.upper".format(str))
