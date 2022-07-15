@@ -4,8 +4,8 @@ def print_matrix_integer(matrix=[[]]):
         for col in matrix:
             x = []
             y = []
-            for j in col:
+            for j in y:
                 y.append(j)
-            for i in row:
+            for i in x:
                 x.append(i)
-            print("{:d}".format(matrix[x][y]), end = "")
+            print("{:d}".format(matrix[i][j]), end = "")
