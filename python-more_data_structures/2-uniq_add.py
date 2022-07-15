@@ -7,4 +7,4 @@ def uniq_add(my_list=[]):
     sum = 0
     for item in mem:
         sum += item
-        return sum
+    return sum
