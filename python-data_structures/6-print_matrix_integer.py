@@ -8,4 +8,4 @@ def print_matrix_integer(matrix=[[]]):
                 y.append(j)
             for i in row:
                 x.append(i)
-            print("{:d}".format(matrix[i][j]), end = "")
+            print("{:d}".format(matrix[x][y]), end = "")
