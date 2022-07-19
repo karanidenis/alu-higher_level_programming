@@ -4,4 +4,4 @@ def complex_delete(a_dictionary, value):
         if a_dictionary[idx] == value:
             a_dictionary.pop(idx)
 
-    print(a_dictionary)
+    return a_dictionary
