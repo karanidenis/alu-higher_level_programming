@@ -1,0 +1,1 @@
+codes of python exceptions and errors. using try and except
