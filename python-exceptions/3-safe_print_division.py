@@ -7,3 +7,6 @@ def safe_print_division(a, b):
     finally:
         print("Inside result:", "{}".format(a))
     return a
+
+
+if __name__ == '__main__':
