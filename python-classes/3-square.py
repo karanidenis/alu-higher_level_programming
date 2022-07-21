@@ -7,7 +7,6 @@ size must be an integer, otherwise raise a TypeError exception with the message 
 if size is less than 0, raise a ValueError exception with the message size must be >= 0
 Public instance method: def area(self): that returns the current square area
 You are not allowed to import any module
-
 """
 
 
