@@ -80,8 +80,18 @@ class Rectangle:
         return rectangle_area
 
     def perimeter(self):
-        if self.__width or self.__height == 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
-        else:
-            rectangle_perimeter = (self.__width*2) + (self.__height*2)
-            return rectangle_perimeter
+        rectangle_perimeter = ((self.__width*2) + (self.__height*2))
+        return rectangle_perimeter
+
+
+if __name__ == '__main__':
+    my_rectangle = Rectangle(2, 4)
+    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
+
+    print("--")
+
+    my_rectangle.width = 10
+    my_rectangle.height = 3
+    print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
