@@ -1,25 +1,9 @@
-#!/usr/bin/python3
-"""
-define a square by:
-Private instance attribute: size
-property def size(self): to retrieve it
-property setter def size(self, value): to set it:
-Instantiation with optional size: def __init__(self, size=0):
-size must be int, raise TypeError exception(message size must be an integer)
-if size is < 0, raise ValueError exception(message size must be >= 0)
-Public instance method: def area(self): returns the current square area
-Public instance method: def my_print(self): that prints #:
-if size is equal to 0, print an empty line
-You are not allowed to import any module
-Private instance attribute: position:
-property def position(self): to retrieve it
-property setter def position(self, value): to set it:
-position(tuple) of 2 positive integers,raise TypeError exception(position must be (tuple) of 2 positive integers)
-"""
+# !/usr/bin/python3
+"""6-square.py"""
 
 
 class Square:
-    """ define a square """
+    """Defines a square"""
 
     def __init__(self, size=0, position=(0, 0)):
         """
@@ -50,9 +34,8 @@ class Square:
     @property
     def position(self):
         """
-        set and get value of position
+        Sets and gets the value of private position attribute
         """
-
         return self.__position
 
     @position.setter
@@ -69,17 +52,20 @@ class Square:
         self.__position = value
 
     def area(self):
+        """
+        Finds area of the square
+        """
         return self.__size * self.__size
 
     def my_print(self):
         """
-        replace square with #
+        Prints the square using # at correct position
         """
-
         if self.__size == 0:
             print()
             return
 
+        # print self.__position[1] new lines
         for i in range(self.__position[1]):
             print()
 
