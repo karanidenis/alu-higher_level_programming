@@ -14,7 +14,8 @@ height < 0: raise ValueError (height must be >= 0)
 property def height(self): to retrieve
 property setter def height(self, value): to set it:
 
-Instantiation with optional width and height: def __init__(self, width=0, height=0):
+Instantiation with optional width and height:
+def __init__(self, width=0, height=0):
 You are not allowed to import any module
 
 """
