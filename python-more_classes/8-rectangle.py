@@ -33,6 +33,14 @@ Initialized to #
 Used as symbol for string representation
 Can be any type
 
+Static method def bigger_or_equal(rect_1, rect_2):
+that returns the biggest rectangle based on the area
+rect_1 must be an instance of Rectangle, raise a TypeError exception
+with the message rect_1 must be an instance of Rectangle
+rect_2 must be an instance of Rectangle, raise a TypeError exception
+with the message rect_2 must be an instance of Rectangle
+Returns rect_1 if both have the same area value
+
 print() and str() should print the rectangle with the character #:
 if width or height is equal to 0, return an empty string
 
@@ -129,3 +137,14 @@ class Rectangle:
     def __del__(self):
         type(self).number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
