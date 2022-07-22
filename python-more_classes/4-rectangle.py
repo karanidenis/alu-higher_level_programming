@@ -26,6 +26,9 @@ if width or height == 0, perimeter == 0
 print() and str() should print the rectangle with the character #:
 if width or height is equal to 0, return an empty string
 
+repr() should return a string representation of the rectangle
+ to be able to recreate a new instance by using eval()
+
 You are not allowed to import any module
 
 """
@@ -99,3 +102,34 @@ class Rectangle:
             if i != self.__height - 1:
                 rectangle.append("\n")
         return "".join(rectangle)
+
+    def __repr__(self):
+        rectangle = "Rectangle(" + str(self.__width)
+        rectangle += ", " + str(self.__height) + ")"
+        return rectangle
+
+
+if __name__ == '__main__':
+    my_rectangle = Rectangle(2, 4)
+    print(str(my_rectangle))
+    print("--")
+    print(my_rectangle)
+    print("--")
+    print(repr(my_rectangle))
+    print("--")
+    print(hex(id(my_rectangle)))
+    print("--")
+
+    # create new instance based on representation
+    new_rectangle = eval(repr(my_rectangle))
+    print(str(new_rectangle))
+    print("--")
+    print(new_rectangle)
+    print("--")
+    print(repr(new_rectangle))
+    print("--")
+    print(hex(id(new_rectangle)))
+    print("--")
+
+    print(new_rectangle is my_rectangle)
+    print(type(new_rectangle) is type(my_rectangle))
