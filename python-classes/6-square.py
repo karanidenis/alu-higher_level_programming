@@ -14,7 +14,7 @@ You are not allowed to import any module
 Private instance attribute: position:
 property def position(self): to retrieve it
 property setter def position(self, value): to set it:
-position must be a tuple,raise TypeError exception(position must be (tuple) of 2 +integers)
+position = tuple,raise TypeError exception(position must be (tuple) of 2 +integers)
 """
 
 
