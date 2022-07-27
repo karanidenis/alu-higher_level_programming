@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" function """
+
+
 def is_kind_of_class(obj, a_class):
     """
     :param obj:
