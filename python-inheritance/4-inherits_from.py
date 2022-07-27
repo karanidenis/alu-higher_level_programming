@@ -7,7 +7,7 @@ def inherits_from(obj, a_class):
     :param obj and a_class
     :return
     """
-    return type(obj) is not a_class
+    return type(obj) is not a_class and isinstance(obj, a_class)
 
 
 if __name__ == '__main__':
