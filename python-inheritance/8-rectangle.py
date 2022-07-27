@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-""" class Rectangle inherits from class BaseGeometry after importing the module"""
+"""
+class Rectangle inherits from class BaseGeometry
+after importing the module
+"""
 
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
