@@ -3,6 +3,9 @@
 
 
 class BaseGeometry:
+    """
+    function
+    """
     def area(self):
         """
         parameter self
