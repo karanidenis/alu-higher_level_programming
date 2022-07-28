@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-""" counting number of characters in a file"""
+""" append and counting number of characters in a file"""
 
 
 def write_file(filename="", text=""):
-
     """
      function creates a new file or appends current one
      and counts number of characters added
