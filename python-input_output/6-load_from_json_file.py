@@ -7,4 +7,4 @@ import json
 def load_from_json_file(filename):
     """ return object from JSON file"""
     with open(filename, 'w') as x:
-        json.load(x)
+        return json.load(x)
