@@ -3,6 +3,8 @@
 
 
 def write_file(filename="", text=""):
+    """ function creates a new file or
+    overwrites current one and counts number of characters """
     with open(filename, mode='w', encoding='utf-8') as text:
         return text.read()
 
