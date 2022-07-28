@@ -16,5 +16,4 @@ def append_after(filename="", search_string="", new_string=""):
             if search_string in lines:
                 lin.append(new_string)
 
-        lin.seek(0)
         lin.write("lin")
