@@ -1,8 +1,6 @@
 #!/usr/bin/python3
 """ class student """
 
-import json
-
 
 class Student:
     """ define function"""
@@ -21,4 +19,4 @@ def __init__(self, first_name, last_name, age):
 
 
 def to_json(self):
-    return json.dumps(self.Student.__dict__)
+    return self.Student.__dict__
