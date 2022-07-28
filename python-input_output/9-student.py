@@ -19,4 +19,4 @@ def __init__(self, first_name, last_name, age):
 
 
 def to_json(self):
-    return self.Student.__dict__
+    return self.__dict__
