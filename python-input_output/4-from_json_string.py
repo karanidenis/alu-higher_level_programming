@@ -6,4 +6,4 @@ import json
 
 def from_json_string(my_str):
     """ function that returns python representation"""
-    return json.load(my_str)
+    return json.loads(my_str)
