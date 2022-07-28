@@ -11,23 +11,27 @@ class Rectangle(BaseGeometry):
     """ class rectangle that inherits from class BaseGeometry"""
     def __init__(self, width, height):
         """
+        initialises rectangle
         :param width:
         :param height:
         """
         self.integer_validator("width", width)
-        self.__width = width
         self.integer_validator("height", height)
+
+        self.__width = width
         self.__height = height
 
     def area(self):
         """
         :returns area of rectangle:
         """
-        return self.__width * self.__height
+        area = self.__width * self.__height
+        return area
 
     def __str__(self):
         """ string representation """
-        print("[Rectangle] " + str(self.__width) + "/" + str(self.__height))
+        print("[{}] {}/{}".format(type(self).__name__,
+                                  self.__width, self.__height))
 
 
 if __name__ == '__main__':
