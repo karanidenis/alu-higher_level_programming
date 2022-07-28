@@ -13,7 +13,8 @@ def append_after(filename="", search_string="", new_string=""):
         lin = []
         for line in range(len(lines)):
             lin.append(lines[line])
-            if search_string in lines:
+            if search_string in lines[line]:
                 lin.append(new_string)
 
-        lin.write("lin")
+        lin.seek(0)
+        lin.write("".join(lin))
