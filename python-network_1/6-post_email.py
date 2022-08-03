@@ -9,6 +9,5 @@ import sys
 
 if __name__ == '__main__':
     values = {'email': sys.argv[2]}
-    req = requests.get(sys.argv[1], values)
-    with requests.urlopen(req) as qer:
-        print(qer.read().decode('utf-8'))
+    req = requests.post(sys.argv[1], data=values)
+    print(req.text)
