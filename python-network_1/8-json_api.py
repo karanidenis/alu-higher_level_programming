@@ -22,6 +22,6 @@ if __name__ == '__main__':
         if not json_1:
             print("No result")
         else:
-            print("{[]} {}".format(json_1.get('id'), json_1.get('name')))
+            print("{} {}".format(json_1.get('[id]'), json_1.get('name')))
     except:
         print("Not a valid JSON")
