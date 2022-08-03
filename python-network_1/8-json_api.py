@@ -15,7 +15,7 @@ if __name__ == '__main__':
         data['q'] = [sys.argv[1]]
     except:
         pass
-    req = requests.POST('http://0.0.0.0:5000/search_user', data)
+    req = requests.post('http://0.0.0.0:5000/search_user', data)
 
     try:
         json_1 = req.json()
