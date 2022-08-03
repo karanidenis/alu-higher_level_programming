@@ -1,2 +1,2 @@
 -- delete databases
-DELETE DATABASE IF NOT EXISTS hbtn_0c_0;
+DELETE DATABASE hbtn_0c_0;
