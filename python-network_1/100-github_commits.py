@@ -12,7 +12,8 @@ if __name__ == '__main__':
     try:
         repository = sys.argv[1]
         owner_name = sys.argv[2]
-        url = 'https://api.github.com/repos/{}/{}/commits'.format(owner_name, repository)
+        url = 'https://api.github.com/repos/{}/{}/commits'.\
+            format(owner_name, repository)
         req = get(url)
         json_o = req.json()
         for i in range(0, 10):
@@ -20,5 +21,3 @@ if __name__ == '__main__':
                                   .get('author').get('name')))
     except:
         pass
-
-
