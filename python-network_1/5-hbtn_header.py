@@ -8,5 +8,5 @@ import sys
 
 
 if __name__ == '__main__':
-    req = requests.urlopen(sys.argv[1]).text
+    req = requests.get(sys.argv[1]).text
     print(req.info()['X-Request-Id'])
