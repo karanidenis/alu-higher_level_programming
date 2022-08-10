@@ -21,7 +21,7 @@ if __name__ == '__main__':
     say_my_name("Walter", "White")
     say_my_name("Bob")
     # say_my_name(77, 7)
-    say_my_name("Clone", 7)
+    # say_my_name("Clone", 7)
     try:
         say_my_name(12, "White")
     except Exception as e:
