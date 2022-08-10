@@ -24,7 +24,7 @@ if __name__ == '__main__':
     print("")
     print_square(0)
     print("")
-    print_square(1)
+    print_square()
     print("")
     try:
         print_square(-1)
