@@ -27,9 +27,3 @@ Negative square:
        >>> print_square(-7)
        Traceback (most recent call last):
        ValueError: size must be >= 0
-
-Pass more than one argument:
-       >>> print_square(-7, 7)
-       Traceback (most recent call last):
-       TypeError: print_square() takes 1 positional argument but 2 were given
-       ValueError: size must be >= 0
