@@ -36,3 +36,12 @@ def matrix_divided(matrix, div):
         len_e = len(elems)
     m = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
     return m
+
+
+if __name__ == '__main__':
+    matrix = [
+        [1, 2, 3],
+        [4, 5, 6]
+    ]
+    print(matrix_divided(matrix, 3))
+    print(matrix)
