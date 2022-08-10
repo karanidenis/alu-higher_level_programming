@@ -4,19 +4,22 @@
 import module:
 >>> print_square = __import__('4-print_square').print_square
 
+test size = int and > 0:
 >>>print_square(4)
 ####
 ####
 ####
 ####
-
+test size not int => TypeError: size must be an integer:
 >>>print_square('red')
 Traceback (most recent call last):
 TypeError: size must be an integer
 
+test size=int<0=> ValueError: size must be >= 0:
 >>>print_square(0)
 size must be >= 0
 
+test missing one argument:
 >>>print_square()
 Traceback (most recent call last):
 TypeError: print_square() missing 1 required positional argument: 'size'
