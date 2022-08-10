@@ -1,9 +1,30 @@
+# ===============================================
+# Unit test 3-say_my_name
+# ===============================================
+import module:
 >>> say_my_name = __import__('3-say_my_name').say_my_name
+
 >>> say_my_name("John", "Smith")
->>> say_my_name("Walter", "White")
->>> say_my_name("Bob")
 My name is John Smith
-My name is Walter White
+
+one argument:
+>>> say_my_name("Bob")
 My name is Bob
+
 >>> say_my_name(12, "White")
 first_name must be a string
+
+No arguments:
+       >>> say_my_name()
+       Traceback (most recent call last):
+       TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Pass different argument (not string):
+       >>> say_my_name("Clone", 7)
+       Traceback (most recent call last):
+       TypeError: last_name must be a string
+
+No strings:
+       >>> say_my_name(77, 7)
+       Traceback (most recent call last):
+       TypeError: first_name must be a string
