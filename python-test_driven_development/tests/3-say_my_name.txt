@@ -11,9 +11,6 @@ one argument:
 >>> say_my_name("Bob")
 My name is Bob
 
->>> say_my_name(12, "White")
-first_name must be a string
-
 No arguments:
        >>> say_my_name()
        Traceback (most recent call last):
