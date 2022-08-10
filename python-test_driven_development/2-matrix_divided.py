@@ -31,7 +31,7 @@ def matrix_divided(matrix, div):
 
         for num in elems:
             if not type(num) in (int, float):
-                raise TypeError("Each row of the matrix must have the same size")
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
         len_e = len(elems)
     m = list(map(lambda x: list(map(lambda y: round(y / div, 2), x)), matrix))
