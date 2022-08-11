@@ -20,6 +20,8 @@ Passing None as a matrix
     	      ...
     TypeError: m_a must be a list
 
+
+
 Passing a string as a matrix
 
     >>> matrix_mul([[3, 3], [4, 4]], "Holberton")
@@ -34,12 +36,33 @@ Passing an empty matrix
     	      ...
     ValueError: m_a can't be empty
 
+Passing an empty matrix 2
+
+    >>> matrix_mul([[1, 2]], [[]])
+    Traceback (most recent call last):
+    	      ...
+    ValueError: m_b can't be empty
+
 Passing a matrix with a list of strings
 
     >>> matrix_mul([[1, '1', 1], ['2', 2, '2']], [[3], [3]])
     Traceback (most recent call last):
     	      ...
     TypeError: m_a should contain only integers or floats
+
+Passing a matrix with a list of strings 2
+
+    >>> matrix_mul([[2, 4, 6], [3, 6, 9]], [[1], ['2'], [3]])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: m_b should contain only integers or floats
+
+Passing a matrix with an empty list
+
+    >>> matrix_mul([[12, 12, 12], [], [14, 14, 14]], [[2], [3], [8]])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: each row of m_a must be of the same size
 
 Passing a matrix which its rows have different size
 
@@ -68,3 +91,17 @@ Missing arguments
     Traceback (most recent call last):
     	      ...
     TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+Passing a list of tuples
+
+   >>> matrix_mul([(1, 5, 10)], [(1), (5)])
+   Traceback (most recent call last):
+   	     ...
+   TypeError: m_a must be a list of lists
+
+Passing a list of string
+
+   >>> matrix_mul([[]], ["Holberton"])
+   Traceback (most recent call last):
+   	     ...
+   TypeError: m_b must be a list of lists
