@@ -30,9 +30,12 @@ def matrix_mul(m_a, m_b):
 
     for lists in m_a:
         for i in lists:
-            if not type(i) in (float, int):
+            if type(i) is not int and type(i) is not float:
                 raise TypeError("m_a should contain only integers or floats")
-            if not type(i) in (float, int):
+
+    for lists in m_b:
+        for i in lists:
+            if type(i) is not int and type(i) is not float:
                 raise TypeError("m_b should contain only integers or floats")
 
     length = 0
