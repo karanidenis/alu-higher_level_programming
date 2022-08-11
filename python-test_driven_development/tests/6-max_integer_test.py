@@ -20,4 +20,4 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_empty_list(self):
         with self.assertRaises(ValueError):
-            max_integer([])
+            (max_integer([]))
