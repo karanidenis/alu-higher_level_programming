@@ -10,9 +10,7 @@ def lazy_matrix_mul(m_a, m_b):
     :param m_b: matrix b
     :return: using Numpy do m_a*m_b
     """
-    x = np.matmul(m_a)
-    y = np.matmul(m_b)
-    return x, y
+    return np.matmul(m_a, m_b)
 
 
 if __name__ == '__main__':
