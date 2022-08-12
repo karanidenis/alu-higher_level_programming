@@ -1,0 +1,28 @@
+#!/usr/bin/python3
+"""mutliply 2 matrices using Numpy module """
+
+import Numpy as np
+
+
+def lazy_matrix_mul(m_a, m_b):
+    """
+    :param m_a: matrix a
+    :param m_b: matrix b
+    :return: using Numpy do m_a*m_b
+    """
+    x = np.matmul(m_a)
+    y = np.matmul(m_b)
+    return x, y
+
+
+if __name__ == '__main__':
+    square_matrix_simple = __import__('0-square_matrix_simple').square_matrix_simple
+    matrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ]
+
+    new_matrix = square_matrix_simple(matrix)
+    print(new_matrix)
+    print(matrix)
