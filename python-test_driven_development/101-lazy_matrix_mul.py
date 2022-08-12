@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """mutliply 2 matrices using Numpy module """
 
-import Numpy as np
+import numpy as np
 
 
 def lazy_matrix_mul(m_a, m_b):
