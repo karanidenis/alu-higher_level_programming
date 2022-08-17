@@ -1,4 +1,4 @@
-#!/usr/pyhton3
+#!/usr/bin/pyhton3
 """ module class with private class attribute __nb_objects = 0
 class constructor: def __init__(self, id=None):
 """
