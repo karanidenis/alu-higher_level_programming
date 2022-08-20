@@ -2,7 +2,7 @@
 """ test for base.py """
 import os
 import unittest
-from models.Base import Base
+from models.base import Base
 
 
 class TestBase(unittest.TestCase):
@@ -92,7 +92,25 @@ class TestBase(unittest.TestCase):
             Base(1, 2)
 
 
-class TestBase_from_json_string(unittest.TestCase):
+class TestBaseToJsonString(unittest.TestCase):
+    """Unittests for testing to_json_string method of Base class."""
+
+    def test_to_json_string_empty_list(self):
+        self.assertEqual("[]", Base.to_json_string([]))
+
+    def test_to_json_string_none(self):
+        self.assertEqual("[]", Base.to_json_string(None))
+
+    def test_to_json_string_no_args(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string()
+
+    def test_to_json_string_more_than_one_arg(self):
+        with self.assertRaises(TypeError):
+            Base.to_json_string([], 1)
+
+
+class TestBaseFromJsonString(unittest.TestCase):
     """Unittests for testing from_json_string method of Base class."""
 
     def test_from_json_string_None(self):
@@ -108,3 +126,15 @@ class TestBase_from_json_string(unittest.TestCase):
     def test_from_json_string_more_than_one_arg(self):
         with self.assertRaises(TypeError):
             Base.from_json_string([], 1)
+
+
+class TestBaseLoadFromFile(unittest.TestCase):
+    """Unittests for testing load_from_file_method of Base class."""
+
+    def test_load_from_file_more_than_one_arg(self):
+        with self.assertRaises(TypeError):
+            Base.load_from_file([], 1)
+
+
+if __name__ == '__main__':
+    unittest.main()

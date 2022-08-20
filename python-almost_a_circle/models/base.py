@@ -2,6 +2,9 @@
 """ module class with private class attribute __nb_objects = 0
 class constructor: def __init__(self, id=None):
 """
+import json
+import csv
+import os.path
 
 
 class Base:
@@ -17,6 +20,36 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dicts):
+        """ changing lists to json strings"""
+        if list_dicts is None or list_dicts == "[]":
+            return "[]"
+        return json.dumps(list_dicts)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """saving objects in a file"""
+        filename = "{}.json".format(cls.__name__)
+        list_dict = []
+
+        if not list_objs:
+            pass
+        else:
+            for i in range(len(list_objs)):
+                list_dict.append(list_objs[i].to_dict())
+
+        lists = cls.to_json_string(list_dict)
+        with open(filename, 'w') as f:
+            f.write(lists)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """changing from json"""
+        if not json_string:
+            return []
+        return json.loads(json_string)
 
 
 if __name__ == "__main__":
