@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-Script to list all cities from the db
-takes 3 arguments
+Script that takes in name of state as argument and list
 """
 
 
@@ -10,10 +9,15 @@ if __name__ == "__main__":
     import MySQLdb
     db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
     cur = db.cursor()
-    cur.execute("SELECT cities.id, cities.name, states.name FROM cities\
-    JOIN states ON cities.state_id = states.id ORDER BY cities.id ASC")
+    check = (argv[4], )
+    cur.execute("SELECT * FROM cities JOIN states\
+    ON cities.state_id = states.id WHERE states.name = %s\
+    ORDER BY cities.id ASC", check)
     lst = cur.fetchall()
+    cities = []
     for r in lst:
-        print(r)
+        if r[4] == check[0]:
+            cities.append(r[2])
+    print(', '.join(cities))
     cur.close()
     db.close()
