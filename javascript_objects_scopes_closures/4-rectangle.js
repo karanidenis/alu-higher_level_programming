@@ -6,7 +6,7 @@ module.exports = class Rectangle {
     this.width = w;
     this.height = h;
   }
-  
+
   print () {
     for (let i = 0; i < this.height; i++) {
       console.log('X'.repeat(this.width));
@@ -14,14 +14,13 @@ module.exports = class Rectangle {
   }
 
   rotate () {
-    this.width = this.height;
-    this.height = this.width;
-    
+    [this.width, this.height] = [this.height, this.width];
   }
+
   double () {
     this.width *= 2;
     this.height *= 2;
-}
+  }
 };
 
 // const Rectangle = require('./4-rectangle');
@@ -39,6 +38,6 @@ module.exports = class Rectangle {
 // r1.print();
 
 
-// // console.log('Rotate:');
-// // r1.rotate();
-// // r1.print();
+// console.log('Rotate:');
+// r1.rotate();
+// r1.print();
