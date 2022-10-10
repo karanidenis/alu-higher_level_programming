@@ -2,9 +2,9 @@
 const args = process.argv;
 function Factorial (y) {
   if (y === 0) {
-  return 1;
+    return 1;
 } else {
-  return y * Factorial( y - 1 );
+    return y * Factorial(y - 1);
   }
 }
 const y = parseInt(args[2]);
