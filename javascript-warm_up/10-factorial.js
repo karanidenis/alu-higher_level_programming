@@ -3,7 +3,7 @@ const args = process.argv;
 function Factorial (y) {
   if (y === 0) {
     return 1;
-} else {
+  } else {
     return y * Factorial(y - 1);
   }
 }
