@@ -1,8 +1,6 @@
 #!/usr/bin/node
 class Rectangle {
-    constructor(rectangle) {
-        this.rectangle = rectangle;
-    }
+    
 }
 // const rectangle = require('./0-rectangle');
 
