@@ -13,7 +13,7 @@ module.exports = class Rectangle {
     }
   }
 };
-  
+
 //   const Rectangle = require('./3-rectangle');
 
 //   const r1 = new Rectangle(2, 3);
