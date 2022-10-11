@@ -2,8 +2,8 @@
 const url = process.argv;
 const request = require('request');
 
-request(url, (error, response, bosy)=> {
-  if (error) throw (error);
+request(url, (err, response, bosy)=> {
+  if (err) throw (err);
   else {
     console.log(`code: ${response.statusCode}`)
   }
