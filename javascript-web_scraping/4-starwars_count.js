@@ -6,7 +6,7 @@ request(url, function (error, response, body) {
   if (error) {
     console.log(error);
   } else {
-    let results = JSON.parse(body).results;
+    const results = JSON.parse(body).results;
     let count = 0;
     results.forEach(result => {
       result.characters.forEach(characterUrl => {
@@ -15,6 +15,6 @@ request(url, function (error, response, body) {
         }
       });
     });
-    console.log(count)
+    console.log(count);
   }
 });
