@@ -9,11 +9,11 @@ request(url, function (error, response, body) {
     const data = JSON.parse(body).characters;
     data.forEach(charUrl => {
       request(charUrl, (err, resp, bdy) => {
-          if (err) console.log(err);
-            else {
-              console.log(JSON.parse(bdy).name);
-            }
-        });
+        if (err) console.log(err);
+        else {
+          console.log(JSON.parse(bdy).name);
+        }
+      });
     });
   }
 });
