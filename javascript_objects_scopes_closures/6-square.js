@@ -5,7 +5,7 @@ module.exports = class Square extends square {
 
   charPrint (C) {
     if (C === undefined) {
-    super.Print();
+    super.print();
   } else {
       for (let i = 0; i < this.height; i++) {
         console.log(C.repeat(this.width));
